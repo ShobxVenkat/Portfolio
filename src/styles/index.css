@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "Poppins", sans-serif;
+  --font-cabinet: "Space Grotesk Variable", sans-serif;
+
+
+  --color-background:#02021a;
+  --color-one: #fef3c6;
+  --animate-spin:spin 50s linear infinite forwards;
+  --animate-slide: 10s linear infinite;
+
+  --breakpoint-xs: 468px;
+
+  @keyframes spin {
+    to{
+        rotate:360deg;
+    }
+  }
+  @keyframes slide {
+    to{
+        rotate:360deg;
+    }
+}
+}
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(23.075% 0.00003 271.152);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --violet: #b700ff;
+}
+
+@theme inline {
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-violet: var(--violet)
+}
+
+@layer components {
+ .layout{
+    @apply relative flex w-full py-12 sm:px-12 md:py-20 lg:px-32 xl:py-6 xl:pb-12 2xl:px-40
+ }
+
+ .border-theme {
+    @apply border border-white/10;
+    &:nth-of-type(odd){
+        @apply max-sm:bg-white/20
+    }
+ }
+
+ .layout-padding {
+    @apply p-5 sm:px-12 xl:px-8
+ }
+
+  .layout-x-padding {
+    @apply px-4 sm:px-12 xl:px-8 py-4 lg:px-16 2xl:px-40
+ }
+}

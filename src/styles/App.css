@@ -1,0 +1,107 @@
+.app{
+        &::before{
+            position: fixed;
+            content:"";
+            height: 200px;
+            width: 200px;
+            background-color:#00ffffaf ;
+            filter: blur(140px);
+            opacity: 60%;
+            pointer-events: none;
+
+
+        }
+
+        &::after{
+            content:"";
+            position: fixed;
+            top:30%;
+            left: 50px;
+            height: 200px;
+            width: 200px;
+            background:#b700ff ;
+            filter: blur(140px);
+            opacity: 85%;
+            pointer-events: none;
+
+        }
+
+        .bg_blur_i{
+            position:fixed;
+            top: 0;
+            right: 0 ;
+            height: 200px;
+            width: 200px;
+            background: #b700ff;
+            filter: blur(140px);
+            opacity: 40%;
+            pointer-events: none;
+        }
+
+          .bg_blur_ii{
+            position:fixed;
+            bottom: 100px;
+            right: 250px ;
+            height: 200px;
+            width: 200px;
+            background: #00ffff;
+            filter: blur(150px);
+            opacity: 30%;
+            pointer-events: none;
+        }
+
+    nav {
+  .nav-icons {
+    transition: transform 0.8s ease-in-out;
+
+    &.reveal {
+      --icons: 5;
+      --offset: 15px;
+
+      transform:
+        rotate(calc(var(--r) * (-360 / var(--icons)) * 1deg))
+        translateY(calc(100% + var(--offset)));
+    }
+  }
+}
+
+.orb {
+  --size: 8;
+  --offset: 60px;
+}
+
+.orb.reveal {
+  transform: 
+    rotate(calc(var(--r) * (360 / var(--size)) * 1deg))
+    translateX(calc(100% + var(--offset)));
+
+    @media (min-width : 768px) {
+      --offset:120px
+    }
+    .stack_img {
+        transform: 
+    rotate(calc(var(--r) * (360 / var(--size)) * -1deg))
+    }
+}
+.paused {
+  animation-play-state: paused;
+}
+
+.running {
+  animation-play-state: running;
+}
+
+.fade-edges{
+  mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+
+.bg-grid-pattern{
+  background-size: 50px 50px;
+  background-image: linear-gradient(to right, #ffffff1a 1px, transparent 1px),
+  linear-gradient(to bottom, #ffffff1a 1px, transparent 1px);
+}
+
+}
+
+
