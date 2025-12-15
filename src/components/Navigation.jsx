@@ -33,21 +33,27 @@ const Navigation = ({ navAngle, setNavAngle, navOpen, setNavOpen, profileOpen })
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 1 } }}
     >
-    <motion.div
+   <motion.div
   role="button"
   tabIndex={0}
   onClick={() => setNavOpen((p) => !p)}
   onKeyDown={(e) =>
     (e.key === "Enter" || e.key === " ") && setNavOpen((p) => !p)
   }
-  className="absolute aspect-square rounded-full border-2 border-black/50 z-50 cursor-grab active:cursor-grabbing flex items-center justify-center"
+  className="absolute aspect-square rounded-full border-2 border-black/50 z-50 cursor-grab active:cursor-grabbing flex items-center justify-center text-[10px] tracking-widest uppercase text-muted-foreground select-none"
   initial={{ height: "100%" }}
   animate={
     navOpen
       ? { height: "200%" }
       : { height: "100%", transition: { duration: 0.5 } }
   }
-/>
+>
+  <span className="translate-y-[8px] block">
+     {navOpen ? "close" : "Click Me"}
+  </span>
+ 
+</motion.div>
+
 {
   links.map((link, index) => (
     <button key={link.href} 
