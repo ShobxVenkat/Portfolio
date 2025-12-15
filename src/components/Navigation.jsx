@@ -49,9 +49,9 @@ const Navigation = ({ navAngle, setNavAngle, navOpen, setNavOpen, profileOpen })
   }
 >
   <span className="translate-y-[8px] block">
-     {navOpen ? "close" : "Click Me"}
+     {navOpen ? "": "Click Me"}
   </span>
- 
+  
 </motion.div>
 
 {
