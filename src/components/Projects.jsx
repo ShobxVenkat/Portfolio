@@ -47,7 +47,7 @@ const Projects = () => {
   className="p-2 pr-3 backdrop-blur-2xl border border-muted-foreground/30 rounded-md flex items-center gap-1 cursor-pointer"
 >
   <SquareArrowOutUpRight className="size-6 object-contain rounded-full" />
-  <span>Live Link</span>
+   <span className='text-green-400'>Live Link</span>
 </a>
 
                   </div>
