@@ -71,13 +71,38 @@ function handleClick() {
             style={{ "--r": `${index}` }}
             title={stack.title}
           > 
-          <img className="stack_img h-full w-full rounded-full object-contain " src={stack.logo} alt="" /></div>
+          <motion.img
+  src={stack.logo}
+  alt=""
+  className="stack_img h-full w-full rounded-full object-contain"
+  initial={{ opacity: 0, scale: 0.85 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{
+    duration: 0.5,
+    delay: 1.5 + index * 0.08, // ⬅️ face ke baad, stagger feel
+    ease: "easeOut",
+  }}
+/></div>
         ))}
       </div>
 
-      <div className="relative size-40 sm:size-52 md:size-72 border-3 border-theme rounded-full overflow-hidden active:scale-[.96] transition-transform cursor-grab active:cursor-grabbing" onClick={handleClick}>
-        <img src={profile} alt="" className="h-full w-full object-cover" />
-      </div>
+     <div
+  className="relative size-40 sm:size-52 md:size-72 border-3 border-theme rounded-full overflow-hidden active:scale-[.96] transition-transform cursor-grab active:cursor-grabbing"
+  onClick={handleClick}
+>
+  <motion.img
+    src={profile}
+    alt=""
+    className="h-full w-full object-cover"
+    initial={{ opacity: 0, scale: 0.96 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{
+      duration: 1,
+      delay: 1, // ⬅️ image thodi der baad aayegi
+      ease: "easeOut",
+    }}
+  />
+</div>
     </motion.div>
   );
 };
